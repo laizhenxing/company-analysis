@@ -4,7 +4,13 @@
 
 ## 安装
 
-前往 [Releases](https://github.com/laizhenxing/company-analysis/releases) 下载最新的 `a-share-six-dimension-research.skill`，在支持本地技能导入的 Kimi 环境中选择“导入本地技能”。
+仓库包含完整 Skill 源码和本地打包工具。下载仓库后，在仓库根目录运行：
+
+```bash
+python3 scripts/package_skill.py
+```
+
+随后即可在 `dist/a-share-six-dimension-research.skill` 得到安装包。在支持本地技能导入的 Kimi 环境中选择“导入本地技能”，选中该文件并确认。
 
 也可以直接查看[中文使用说明](docs/A股六维公司研究-使用说明.md)。
 
@@ -31,8 +37,7 @@
 
 - `a-share-six-dimension-research/`：可直接打包的 Skill 源文件；
 - `docs/`：面向最终用户的中文使用说明；
-- `scripts/package_skill.py`：本地打包工具，仅依赖 Python 标准库；
-- `.github/workflows/release-skill.yml`：自动校验、打包并发布安装包到 Releases。
+- `scripts/package_skill.py`：本地校验与打包工具，仅依赖 Python 标准库。
 
 ## 本地打包
 
